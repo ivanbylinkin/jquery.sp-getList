@@ -78,7 +78,11 @@ $.fn.getMultiLists = function(options){
 		}
 		viewfields += "</ViewFields>";
 		options.CAMLViewFields = viewfields;
-		options.CAMLQuery = options.query;
+		if (options.queries){ 
+			if (options.queries[s]){ options.CAMLQuery = options.queries[s]; }
+			else { alert("getList_error: more lists being queried than queries provided"); }
+		}
+		else { options.CAMLQuery = options.query; }
 		options.mapping = mappings;
 		// Add all established values to the SPServices object
 		var obj = $.fn.getList.defaults;
