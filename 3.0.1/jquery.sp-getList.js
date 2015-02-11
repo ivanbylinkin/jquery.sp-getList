@@ -133,7 +133,8 @@ $.fn.getListSimple = function(options){
 			mapping: options.mappings,
 			includeAllAttrs: true
 		});
-	}
+		if (options.completefunc){ options.completefunc(options.data); }
+	};
 	// Add any values specified by the user
 	for (var key in obj){
 		if (options[key]){
