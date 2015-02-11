@@ -206,4 +206,4 @@ $.fn.getList.help_changeToken = "Passing this parameter back into getList will r
 $.fn.getList.help_mapping = "The mapping used to parse the data into JSON. This mapping will include any specific overrides you specified as well as the automatically created mappings. You can pass this mapping into the function on subsequent calls to reduce overhead, though the function saves the mapping in a local data store for reuse."
 $.fn.getList.help_data = "The actual data return by getList";
 $.fn.getList.help_deletedIds = "If this is call 2 or greater to getList, deletedIds will contain an array of IDs for list items which have been deleted since the prior call."
-$.fn.getList.version = 'v3.0.1';
+$.fn.getList.version = 'v3.0.2';
